@@ -1,4 +1,4 @@
 package lessons.forest;
 
-public class Squirel {
+public class Squirrel {
 }
