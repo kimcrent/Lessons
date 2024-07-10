@@ -7,18 +7,21 @@ import java.io.ObjectOutputStream;
 
 public class WriteObject {
     public static void main(String[] args) {
-        Person person = new Person(1, "Bob");
-        Person person1 = new Person(2,"Mike");
+        Person[] people = {new Person (1, "Bob"), new Person(2,"Mike"), new Person(3,"Stive"), new Person(4,"Roma")};
 
         try {
             FileOutputStream fos = new FileOutputStream("src/people.bin");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
 
-            oos.writeObject(person);
-            oos.writeObject(person1);
+//            oos.writeInt(people.length);
+//            for (Person person : people) {
+//                oos.writeObject(person);
+//            }
+
+            oos.writeObject(people);
 
 
-            oos.close();
+            fos.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
