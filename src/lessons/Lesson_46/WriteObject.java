@@ -21,7 +21,7 @@ public class WriteObject {
             oos.writeObject(people);
 
 
-            fos.close();
+            oos.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
